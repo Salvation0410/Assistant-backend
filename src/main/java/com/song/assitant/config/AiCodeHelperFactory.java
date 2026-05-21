@@ -27,6 +27,7 @@ public class AiCodeHelperFactory {
         AiCodeHelperService aiCodeHelperService = AiServices.builder(AiCodeHelperService.class)
                 .chatModel(qwenChatModel)
                 .chatMemory(chatMemory)
+                .chatMemoryProvider(memoryId -> MessageWindowChatMemory.withMaxMessages(10))
                 .build();
         return aiCodeHelperService;
     }
