@@ -1,3 +1,10 @@
 spring:
     application:
       name: Assistant
+
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        model-name: qwen-max
+        api-key: sk-de4d1713a1ec4fd1ade9c055c0e50181
