@@ -1,6 +1,7 @@
 package com.song.assitant.ai;
 
 import dev.langchain4j.service.MemoryId;
+import dev.langchain4j.service.Result;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 
@@ -22,5 +23,7 @@ public interface AiCodeHelperService {
     Record chatForReport(String userMessage);
 
 
+    @SystemMessage(fromResource = "system-prompt.txt")
+    Result<String> chatWithRag(String userMessage);
     record Record(String name, List<String> suuggestionList){}
 }
